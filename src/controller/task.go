@@ -70,7 +70,7 @@ func TaskPOST(c *gin.Context) {
     title := c.PostForm("title")
     now := time.Now()
 
-    _, err := db.Exec("INSERT INTO task (title, created_at, updated_at) VALUES(?, ?, ?)", title, now, now)
+    _, err := db.Exec("INSERT INTO task (title, create_at, updated_at) VALUES(?, ?, ?)", title, now, now)
     if err != nil {
         panic(err.Error())
     }
