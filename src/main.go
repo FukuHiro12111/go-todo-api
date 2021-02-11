@@ -12,7 +12,7 @@ func main() {
 	{
 		v1.GET("/tasks", controller.TaskGET)
 		v1.POST("/tasks", controller.TaskPOST)
-		v1.PATCH("tasks/:id", controller.TaskPATCH)
+		v1.PATCH("/tasks/:id", controller.TaskPATCH)
 		v1.DELETE("/tasks/:id", controller.TaskDELETE)
 	}
 	//nginxのreverse proxy設定
